@@ -25,8 +25,6 @@ namespace MyProject.Service
                     throw new Exception($"Author with ID {authorId} not found");
                 book.AuthorBooks.Add(new AuthorBook { Book = book, Author = author });
 
-                    
-
             }
             await _bookRepo.AddAsync(book);
             return book;            
